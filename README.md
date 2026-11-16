@@ -13,7 +13,7 @@
 | Day4 | SLAM Toolbox 建图 + 保存地图 | ✅ |
 | Day5 | AMCL 定位 + Nav2 导航到目标点 | ✅ |
 | Day6 | 手写 3 个 Python 节点（Action / Sub / Pub） | ✅ 已实跑通过 |
-| Day7 | Git + GitHub 存档 | 进行中 |
+| Day7 | Git + GitHub 存档 | ✅ 已推送到 GitHub |
 
 ## 目录结构
 
