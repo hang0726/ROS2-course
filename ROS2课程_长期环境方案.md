@@ -87,7 +87,7 @@ exit
 
 ### 4. 一键装课程环境
 ```bash
-cd /mnt/d/具身智能求职培训/Day4_Nav2建图/模板
+cd /mnt/d/ROS2七天速成/Day4_Nav2建图/模板
 bash 一键装ROS2课程环境.sh
 ```
 脚本：locale → 中科大 ROS2 源 → `ros-humble-desktop` + `ros-dev-tools` →
@@ -109,7 +109,7 @@ dpkg -l | grep gz-tools2             # 应为空 ← 隔离成功的标志
 2. **论文 / Isaac Sim / Gazebo Garden / LeRobot / 训练 → 只在 `Ubuntu-22.04`**，一个包都别动。
 3. **`.wslconfig` 永远不改**（`networkingMode=nat` 是 InternUtopia DDS 的命脉）。
 4. **分时运行**：不同时跑两个重负载（内存全局 12G 上限）。做课程前 `wsl --shutdown` 可释放内存，之后重开即可；两个环境「后面都能用」。
-5. **课程材料放 D 盘**（`D:\具身智能求职培训`），两边 `/mnt/d` 都能读；不要在 WSL 内部互拷。
+5. **课程材料放 D 盘**（`D:\ROS2七天速成`），两边 `/mnt/d` 都能读；不要在 WSL 内部互拷。
 6. **B 崩了就重建**：`wsl --unregister ROS2Course` → 重跑第四节 2~4 步，约 30 分钟满血；**A 永不参与，绝不连坐**。
 
 ---
@@ -117,7 +117,7 @@ dpkg -l | grep gz-tools2             # 应为空 ← 隔离成功的标志
 ## 六、Day4 在这套环境下怎么跑
 在 **`ROS2Course`** 终端里（三终端，与 `笔记.md` 一致）：
 ```bash
-bash /mnt/d/具身智能求职培训/Day4_Nav2建图/模板/启动建图.sh
+bash /mnt/d/ROS2七天速成/Day4_Nav2建图/模板/启动建图.sh
 ros2 launch slam_toolbox online_async_launch.py use_sim_time:=true
 ros2 run rviz2 rviz2 -d /opt/ros/humble/share/nav2_bringup/rviz/nav2_default_view.rviz
 ros2 run turtlebot3_teleop teleop_keyboard

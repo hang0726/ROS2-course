@@ -15,7 +15,7 @@
 #    脚本末尾会写 ~/.bashrc，root 跑会写进 /root，登录用户读不到。
 #
 # 用法（课程环境的终端里）：
-#   cd /mnt/d/具身智能求职培训/Day4_Nav2建图/模板
+#   cd /mnt/d/ROS2七天速成/Day4_Nav2建图/模板
 #   bash 一键装ROS2课程环境.sh
 # 约 20~40 分钟；跑完重开终端或 source ~/.bashrc
 #

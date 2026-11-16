@@ -7,10 +7,10 @@
 # Ctrl+C 退出遥控后问一句是否存图；脚本结束自动清理后台进程
 #
 # 用法（ROS2Course 里，必须用绝对路径）：
-#   bash /mnt/d/具身智能求职培训/Day4_Nav2建图/模板/Day4_一键启动.sh
+#   bash /mnt/d/ROS2七天速成/Day4_Nav2建图/模板/Day4_一键启动.sh
 #
 # 3D 窗口（Gazebo / RViz）默认走软件渲染防黑屏；想试硬件渲染：
-#   HARDWARE_GL=1 bash /mnt/d/具身智能求职培训/Day4_Nav2建图/模板/Day4_一键启动.sh
+#   HARDWARE_GL=1 bash /mnt/d/ROS2七天速成/Day4_Nav2建图/模板/Day4_一键启动.sh
 # ============================================================
 
 # 故意不开 set -u：ROS2 的 setup.bash 会引用未定义变量 AMENT_TRACE_SETUP_FILES，
@@ -110,6 +110,6 @@ if [ "${ans:-Y}" = "Y" ] || [ "${ans:-Y}" = "y" ]; then
         exit 1
     fi
 else
-    echo "跳过存图。以后可跑：bash /mnt/d/具身智能求职培训/Day4_Nav2建图/模板/保存地图.sh"
+    echo "跳过存图。以后可跑：bash /mnt/d/ROS2七天速成/Day4_Nav2建图/模板/保存地图.sh"
     exit 1
 fi

@@ -11,7 +11,7 @@
 # 现有环境本来就是好的 —— 这个脚本只是顺手腾点磁盘空间。
 #
 # 用法（在你现有 WSL 终端里）：
-#   bash ~/具身智能求职培训/Day4_Nav2建图/模板/现有WSL_安全清理.sh
+#   bash ~/ROS2七天速成/Day4_Nav2建图/模板/现有WSL_安全清理.sh
 #
 # ⚠️ 释放 RAM 不在这个脚本里：那要在 Windows PowerShell 跑
 #    wsl --shutdown    （会关掉 WSL，执行前确认没在跑仿真/训练）
