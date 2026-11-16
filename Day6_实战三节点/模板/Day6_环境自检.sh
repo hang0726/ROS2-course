@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # ============================================================
 # Day6 模板 · 动手前的环境自检（只读，不改任何东西）
-# 用法： bash "/mnt/d/ROS2七天速成/Day6_实战三节点/模板/Day6_环境自检.sh"
+# 用法： bash "/mnt/d/具身智能求职培训/Day6_实战三节点/模板/Day6_环境自检.sh"
 # 什么时候跑：Day5 导航栈已经在另一个窗口跑起来之后、写节点之前。
 # ============================================================
 
@@ -32,7 +32,7 @@ else
 fi
 echo
 echo "===== 5) 三条运行命令（分别在 3 个终端里跑）====="
-echo '  cd /mnt/d/ROS2七天速成/Day6_实战三节点'
+echo '  cd /mnt/d/具身智能求职培训/Day6_实战三节点'
 echo '  python3 练习/my_send_nav_goal.py 0.5 0.0 0.0'
 echo '  python3 odom_subscriber.py'
 echo '  python3 velocity_commander.py'

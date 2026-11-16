@@ -3,7 +3,7 @@
 # ============================================================
 # Day5 模板 · 加载已存地图 + AMCL 定位 + 导航栈（TB3 仿真）
 # 用法（Day4 已存好 ~/tb3_map.pgm + ~/tb3_map.yaml）：
-#     bash /mnt/d/ROS2七天速成/Day5_Nav2导航/模板/保存并导航.sh
+#     bash /mnt/d/具身智能求职培训/Day5_Nav2导航/模板/保存并导航.sh
 #     bash .../保存并导航.sh /path/to/other_map.yaml   # 也可指定别的地图
 #
 # ⚠️ 运行前必须先关掉 Day4 的全部窗口（Gazebo / SLAM / RViz / teleop）：

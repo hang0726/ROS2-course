@@ -15,7 +15,7 @@
 #   5) 验证 ros2 --version
 #
 # 用法（Ubuntu 终端里）：
-#   cd /mnt/d/ROS2七天速成/Day1_安装ROS2Humble/模板
+#   cd /mnt/d/具身智能求职培训/Day1_安装ROS2Humble/模板
 #   bash day1_install_ros2.sh
 #   装完重开终端，或执行： source ~/.bashrc
 # ============================================================

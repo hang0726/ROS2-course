@@ -3,7 +3,7 @@
 # Day1 模板 · 环境检查脚本（无需 ROS2 也能跑）
 # 用途：装机后一键核对 WSL2 发行版 + ROS2 环境是否就位。
 # 用法：
-#     bash /mnt/d/ROS2七天速成/Day1_安装ROS2Humble/模板/env_check.sh
+#     bash /mnt/d/具身智能求职培训/Day1_安装ROS2Humble/模板/env_check.sh
 
 echo "===== 1. Ubuntu 版本（应为 22.04）====="
 lsb_release -a 2>/dev/null | grep "Release" || cat /etc/os-release | grep VERSION=

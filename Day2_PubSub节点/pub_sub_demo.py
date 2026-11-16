@@ -8,7 +8,7 @@ Day2 · 发布者/订阅者 演示（你改过的简化版，已修复 3 个 bug
 
 用法（先在 WSL 里 source 环境，再开两个终端分别跑）：
     source /opt/ros/humble/setup.bash
-    cd /mnt/d/ROS2七天速成/Day2_PubSub节点
+    cd /mnt/d/具身智能求职培训/Day2_PubSub节点
 
     终端1：python3 pub_sub_demo.py pub     # 发布者，每 0.5s 发一条
     终端2：python3 pub_sub_demo.py sub     # 订阅者，打印收到的消息

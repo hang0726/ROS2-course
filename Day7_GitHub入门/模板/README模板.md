@@ -23,7 +23,7 @@
 ## 快速开始
 ```bash
 source /opt/ros/humble/setup.bash
-cd /mnt/d/ROS2七天速成
+cd /mnt/d/具身智能求职培训
 # 按 Day1→Day7 顺序学习，每个 Day 里有 笔记.md 和可直接运行的 .py
 ```
 

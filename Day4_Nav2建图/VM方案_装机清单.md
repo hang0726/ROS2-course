@@ -46,7 +46,7 @@ Broadcom 官网下载 Windows 版（**2024-11 起个人/商用全免费**，需�
 | 磁盘 | **≥ 50 GB**（ROS2 + Gazebo + TB3 约 20G，留余量） |
 | 网络 | NAT（默认） |
 | ★ 显示 | **勾选「加速 3D 图形」**，显存拉到 2~4 GB ← **Gazebo 不黑屏的关键** |
-| 共享文件夹 | 勾上，把 `D:\ROS2七天速成` 挂进 VM |
+| 共享文件夹 | 勾上，把 `D:\具身智能求职培训` 挂进 VM |
 
 装 Ubuntu 一路下一步，用户名建议 `micckey`，密码记好。
 进桌面后先跑一次：
@@ -58,14 +58,14 @@ sudo apt update && sudo apt upgrade -y && sudo reboot
 
 ## 二、把课程材料弄进 VM
 三选一：**VMware 共享文件夹**（最快）/ U 盘 / 直接拖文件。
-目标路径建议 `~/ROS2七天速成/`，把 `D:\ROS2七天速成` 整个拷进去。
-> 共享文件夹挂点通常是 `/mnt/hgfs/ROS2七天速成/`；看不到就先装 `open-vm-tools`（一键脚本里已装）再重登。
+目标路径建议 `~/具身智能求职培训/`，把 `D:\具身智能求职培训` 整个拷进去。
+> 共享文件夹挂点通常是 `/mnt/hgfs/具身智能求职培训/`；看不到就先装 `open-vm-tools`（一键脚本里已装）再重登。
 
 ---
 
 ## 三、VM 内一键装环境
 ```bash
-cd ~/ROS2七天速成/Day4_Nav2建图/模板
+cd ~/具身智能求职培训/Day4_Nav2建图/模板
 bash VM内一键装ROS2与TB3.sh
 ```
 脚本做 6 件事：locale → 中科大 ROS2 源 → `ros-humble-desktop` + `ros-dev-tools` →
@@ -108,7 +108,7 @@ swap=8GB
 ## 五、Day4 接着跑（VM 里三终端，与笔记一致）
 ```bash
 # 终端1：起 Gazebo 世界
-bash ~/ROS2七天速成/Day4_Nav2建图/模板/启动建图.sh
+bash ~/具身智能求职培训/Day4_Nav2建图/模板/启动建图.sh
 # 终端2：起 SLAM 建图
 ros2 launch slam_toolbox online_async_launch.py use_sim_time:=true
 # 终端3：RViz + 键盘遥控
@@ -121,7 +121,7 @@ ros2 run turtlebot3_teleop teleop_keyboard
 
 ## 六、现有 WSL 的可选清理（只清缓存，不动任何包）
 ```bash
-bash ~/ROS2七天速成/Day4_Nav2建图/模板/现有WSL_安全清理.sh
+bash ~/具身智能求职培训/Day4_Nav2建图/模板/现有WSL_安全清理.sh
 ```
 只做：清 apt 下载缓存、systemd 日志、pip 缓存 → **纯腾磁盘**。
 > ⚠️ 我这边 `wsl.exe` 被沙箱黑名单拦截、Bash 的 PATH 也被 strip，

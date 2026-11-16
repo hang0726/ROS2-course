@@ -1,7 +1,7 @@
-# 我的 ROS2 七天速成课程
+# 具身智能求职培训
 
-> 从零开始的 ROS2 实战课程：安装 → 通信机制 → 工程化 → Nav2 建图导航 → 实战三节点 → GitHub 存档。
-> 环境：WSL2 Ubuntu 22.04 + ROS2 Humble（Gazebo / SLAM Toolbox / AMCL / Nav2）。
+> ROS2 实战课程 + 具身智能真机项目，面向具身智能算法岗求职：安装 → 通信 → 工程化 → Nav2 建图导航 → 实战三节点 → GitHub 存档 → 真机 Sim2Real 作品。
+> 环境：WSL2 Ubuntu 22.04 + ROS2 Humble（Gazebo / SLAM Toolbox / AMCL / Nav2）+ RK3528 真车。
 
 ## 课程进度
 
@@ -14,6 +14,7 @@
 | Day5 | AMCL 定位 + Nav2 导航到目标点 | ✅ |
 | Day6 | 手写 3 个 Python 节点（Action / Sub / Pub） | ✅ 已实跑通过 |
 | Day7 | Git + GitHub 存档 | ✅ 已推送到 GitHub |
+| Day8 | 具身智能真机 + Sim2Real 求职作品 | ⬜ 待真车到手 |
 
 ## 目录结构
 
@@ -26,13 +27,14 @@
 | `Day5_Nav2导航` | 保存地图 + AMCL + 导航到目标 |
 | `Day6_实战三节点` | 三个核心 Python 节点 + 全注释练习 + 标准答案 |
 | `Day7_GitHub入门` | 注册、建仓、提交代码 |
+| `Day8_具身智能真机入门` | RK3528 真车六阶段上车 + 资料索引 + Sim2Real 面试作品 |
 
 ## 快速开始
 
 ```bash
 source /opt/ros/humble/setup.bash
-cd /mnt/d/ROS2七天速成
-# 按 Day1 -> Day7 顺序学习，每个 Day 里有 笔记.md 和可直接运行的 .py
+cd /mnt/d/具身智能求职培训
+# 按 Day1 -> Day8 顺序学习，每个 Day 里有 笔记.md 和可直接运行的 .py
 ```
 
 > ⚠️ WSL 里跑代码务必显式带上 `source /opt/ros/humble/setup.bash` 和 `cd`，否则会 import 不到 rclpy。

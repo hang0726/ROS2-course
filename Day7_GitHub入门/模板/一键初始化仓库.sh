@@ -14,7 +14,7 @@
 #        git config --global user.email "hang0726@users.noreply.github.com"
 #
 # 用法（在 WSL 终端执行）：
-#   bash /mnt/d/ROS2七天速成/Day7_GitHub入门/模板/一键初始化仓库.sh git@github.com:hang0726/ROS2-course.git
+#   bash /mnt/d/具身智能求职培训/Day7_GitHub入门/模板/一键初始化仓库.sh git@github.com:hang0726/ROS2-course.git
 #
 # 脚本会：检查身份 -> 进入课程根目录 -> git init(若需要) -> 拷 .gitignore
 #         -> add -> commit(若有改动) -> 连远程 -> push -u
@@ -30,7 +30,7 @@ if [ -z "$REMOTE" ]; then
 fi
 
 # ★★★ 课程根目录（WSL 里访问 Windows 的 D 盘）
-COURSE_DIR="/mnt/d/ROS2七天速成"
+COURSE_DIR="/mnt/d/具身智能求职培训"
 if [ ! -d "$COURSE_DIR" ]; then
     echo "[ERROR] 找不到课程目录: $COURSE_DIR"
     exit 1
