@@ -1,0 +1,4 @@
+# ament_python 的包标记文件（空文件即可）
+# colcon build 时会被拷贝到 share/ament_index/resource_index/packages
+# 用来告诉 ROS2 "my_robot_course 是一个已安装的包"，缺了会导致 build 失败。
+# 内容无所谓，留空或留这一行注释都可以。

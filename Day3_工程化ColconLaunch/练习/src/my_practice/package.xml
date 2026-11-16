@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- Day3 练习包 · package.xml（已配好，包名 my_practice，和答案包隔离） -->
+<package format="3">
+  <name>my_practice</name>
+  <version>0.0.1</version>
+  <description>Day3 练习包（自己手敲节点代码）</description>
+  <maintainer email="you@example.com">MicckeY</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- 用了什么就声明什么；照着你的代码补/删 -->
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>example_interfaces</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

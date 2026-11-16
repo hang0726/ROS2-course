@@ -1,0 +1,27 @@
+# Day7 · 换行符规则
+# 本课程是「Windows 侧写文件、WSL 里执行」，.sh 一旦变成 CRLF，
+# WSL bash 会报 "\r: command not found"，脚本直接跑不起来。
+# 因此所有文本统一用 LF 存储和检出（优先级高于 core.autocrlf）。
+
+* text=auto eol=lf
+
+*.sh    text eol=lf
+*.bash  text eol=lf
+*.py    text eol=lf
+*.md    text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+*.xml   text eol=lf
+*.json  text eol=lf
+*.txt   text eol=lf
+*.launch.py text eol=lf
+
+# Windows 批处理仍用 CRLF（桌面 launcher 不在本仓库，留作约定）
+*.bat   text eol=crlf
+*.ps1   text eol=crlf
+
+# 二进制文件不要做换行转换
+*.pgm   binary
+*.png   binary
+*.jpg   binary
+*.pdf   binary

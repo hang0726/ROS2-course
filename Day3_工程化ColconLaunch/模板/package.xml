@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- Day3 模板 · ROS2 ament_python 包的 package.xml -->
+<!-- 作用：声明包名、版本、依赖。缺了 <exec_depend> 编译/运行会缺包 -->
+<package format="3">
+  <name>my_robot_course</name>                       <!-- ★★★ 包名，ros2 run/launch 用它 -->
+  <version>0.0.1</version>
+  <description>我的 ROS2 课程练习包（pub/sub + service + launch）</description>
+  <maintainer email="you@example.com">MicckeY</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- 构建/运行依赖：用了什么消息、什么客户端库就声明什么 -->
+  <depend>rclpy</depend>                              <!-- ROS2 Python 客户端（必选） -->
+  <depend>std_msgs</depend>                           <!-- String 等标准消息 -->
+  <depend>example_interfaces</depend>                 <!-- AddTwoInts 等服务示例 -->
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>             <!-- Python 包固定写法 -->
+  </export>
+</package>

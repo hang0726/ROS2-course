@@ -1,0 +1,30 @@
+# Day7 · ROS2 / Python .gitignore
+# 作用：让 git 只跟踪源码和笔记，忽略编译产物、缓存和临时文件。
+
+# ===== ROS2 Colcon 工作空间产物（Day3 练习里就有这些）=====
+build/
+install/
+log/
+.colcon/
+
+# ===== Python 缓存 / 字节码 =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# ===== 编辑器 / 系统 =====
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# ===== 日志 / 备份 / 临时文件 =====
+*.log
+*.bak
+*.tmp
+
+# ===== 地图产物（可选：本课程的地图存在 WSL 家目录，不进仓库）=====
+# 若以后想把 tb3_map.pgm / .yaml 一起存档，删掉下面两行的注释
+# *.pgm
+# *.yaml
