@@ -31,7 +31,7 @@
 | ROS 版本 | Humble | Humble |
 | 建图 | slam_toolbox | slam_gmapping |
 | 定位 | AMCL | AMCL |
-| 导航 | nav2_bringup | xuegecar_navigation2 |
+| 导航 | nav2_bringup | chuyun_navigation2 (Lite/Nav2) |
 | 可视化 | RViz | ros2_web 网页中控台（Vue3 + Foxglove） |
 
 ---
@@ -68,7 +68,7 @@
 ├── 模板/
 │   ├── Day8_真机环境自检.sh    # SSH 上车一键体检
 │   ├── Day8_benchmark采样.py  # 导航误差自动采样
-│   └── ros_config_示例.json   # 中控台配置示例
+│   └── ros_config.json        # 中控台真实配置（见 Day8 ros2_web配置/）
 ├── benchmark记录表.md          # 原始数据
 └── README.md                  # 本文件
 ```

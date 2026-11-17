@@ -1,36 +1,6 @@
 {
-  "_说明": "ros2_web 中控台配置示例。字段来自出云 ros2_web 仓库 README，路径按进阶版(RK3528)默认。部署时以你车上实际的 ros_config.json 为准。",
-  "tasks": {
-    "startup": "ros2 launch foxglove_bridge foxglove_bridge_launch.xml port:=8765",
-    "_startup_说明": "后台任务：起 Foxglove Bridge，网页靠 ws://<主机>:8765 连 ROS2",
-    "mapping": "ros2 launch slam_gmapping slam_gmapping.launch.py",
-    "_mapping_说明": "建图命令。真机默认 slam_gmapping，不是仿真课的 slam_toolbox",
-    "navigation": "ros2 launch xuegecar_navigation2 navigation2.launch.py",
-    "_navigation_说明": "导航命令。真机用出云自有功能包，不是 nav2_bringup"
-  },
-  "save_map": {
-    "save_dir": "/root/chuyun_ws/src/xuegecar_navigation2/maps",
-    "_save_dir_说明": "网页端保存 .yaml/.pgm 的目录"
-  },
-  "maps_dir": "/root/chuyun_ws/src/xuegecar_navigation2/maps",
-  "_maps_dir_说明": "网页端读取历史地图的目录",
-  "camera": {
-    "stream_url": "http://192.168.31.194:8081/",
-    "_stream_url_说明": "摄像头 MJPEG 流地址，换成你车的 IP"
-  },
-  "topics": {
-    "cmd_vel": "/cmd_vel",
-    "battery": "/battery",
-    "map": "/map",
-    "costmap": "/local_costmap/costmap",
-    "scan": "/scan",
-    "tf": "/tf",
-    "odom": "/odom",
-    "plan": "/plan",
-    "goal_pose": "/goal_pose",
-    "initial_pose": "/initialpose",
-    "navigate_feedback": "/navigate_to_pose/_action/feedback",
-    "imu": "/imu"
-  },
-  "_topics_说明": "前端订阅/发布的话题名。你车上话题若不同，直接改这里，别改前端代码"
+  "_已迁移": "旧版示例（xuegecar_navigation2 / 字符串式 tasks / 旧话题）已过时，不要用。",
+  "_请用": "ros2_web配置/ros_config.json —— 来自卖家 ros2_web 仓库 2026-10 真实版本，字段与新版中控台一致。",
+  "_部署": "见 ros2_web配置/部署说明.md。关键点：clone Ros_Vue_arm 到 /root/ros2_web/Ros_Vue_arm，替换 ros_config.json，bash start_console.sh。",
+  "_差异": "新版默认 slam_toolbox 建图(可切 cartographer/gmapping)、lite 导航(可切 nav2)、话题用降频 /web/tf 和 /web/odometry/filtered、电池 /battery_state、包名 chuyun_navigation2。"
 }

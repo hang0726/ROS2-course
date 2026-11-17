@@ -1,0 +1,143 @@
+{
+  "_说明": "来源：czu963889306-dev/ros2_web 仓库 Ros_Vue_arm/ros_config.json（2026-10 真实版本）。部署到 /root/ros2_web/Ros_Vue_arm/ros_config.json。若路径不同，改 tasks.startup 里 foxglove params 的绝对路径。",
+  "tasks": {
+    "startup": [
+      {
+        "id": "foxglove",
+        "description": "Foxglove 数据桥接 (低负载模式)",
+        "command": "ros2",
+        "args": [
+          "run",
+          "foxglove_bridge",
+          "foxglove_bridge",
+          "--ros-args",
+          "--params-file",
+          "/root/ros2_web/foxglove_bridge.params.yaml"
+        ],
+        "delay": 0
+      }
+    ],
+    "mapping": [
+      {
+        "id": "mapSlamToolbox",
+        "description": "slam_toolbox 异步建图",
+        "command": "ros2",
+        "args": [
+          "launch",
+          "chuyun_navigation2",
+          "slam_toolbox_mapping.launch.py",
+          "use_sim_time:=false"
+        ],
+        "delay": 0
+      }
+    ]
+  },
+  "save_map": {
+    "command": "ros2",
+    "args": [
+      "run",
+      "nav2_map_server",
+      "map_saver_cli",
+      "-f"
+    ],
+    "description": "保存地图（-f 后追加地图名和路径）",
+    "save_dir": "/root/chuyun_ws/src/chuyun_navigation2/maps"
+  },
+  "maps_dir": "/root/chuyun_ws/src/chuyun_navigation2/maps",
+  "camera": {
+    "stream_url": "/stream",
+    "stream_port": 8080,
+    "mediamtx_api_url": "http://127.0.0.1:9997",
+    "webrtc_port": 8889,
+    "preferred_webrtc_path": "cam0"
+  },
+  "services": {
+    "set_arm_pose": "/set_arm_pose"
+  },
+  "topics": {
+    "cmd_vel": "/cmd_vel",
+    "servo_cmd": "/servo_cmd",
+    "map": "/map",
+    "costmap": "/global_costmap/costmap",
+    "scan": "/scan",
+    "tf": "/web/tf",
+    "odom": "/web/odometry/filtered",
+    "plan": "/plan",
+    "goal_pose": "/goal_pose",
+    "initial_pose": "/initialpose",
+    "navigate_feedback": "/lite_navigation/feedback",
+    "cancel_navigation": "/lite_navigation/cancel",
+    "battery_state": "/battery_state"
+  },
+  "default_mapping_algorithm": "slam_toolbox",
+  "mapping_algorithms": {
+    "cartographer": {
+      "id": "mapCartographer",
+      "description": "Cartographer 建图（融合里程计）",
+      "command": "ros2",
+      "args": [
+        "launch",
+        "chuyun_cartographer",
+        "cartographer.launch.py",
+        "configuration_basename:=chuyun_laser_2d_ekf.lua",
+        "odom_topic:=/odometry/filtered",
+        "use_sim_time:=false"
+      ],
+      "delay": 0
+    },
+    "gmapping": {
+      "id": "mapGmapping",
+      "description": "Gmapping 建图",
+      "command": "ros2",
+      "args": [
+        "launch",
+        "slam_gmapping",
+        "slam_gmapping.launch.py"
+      ],
+      "delay": 0
+    },
+    "slam_toolbox": {
+      "id": "mapSlamToolbox",
+      "description": "slam_toolbox 异步建图",
+      "command": "ros2",
+      "args": [
+        "launch",
+        "chuyun_navigation2",
+        "slam_toolbox_mapping.launch.py",
+        "use_sim_time:=false"
+      ],
+      "delay": 0
+    }
+  },
+  "default_navigation_engine": "lite",
+  "navigation_engines": {
+    "nav2": {
+      "id": "navigation_nav2",
+      "description": "Nav2 导航（AMCL + A* + DWB）",
+      "command": "ros2",
+      "args": [
+        "launch",
+        "chuyun_navigation2",
+        "nav2_rk3566.launch.py"
+      ],
+      "params_files": {
+        "diff": "/root/chuyun_ws/install/chuyun_navigation2/share/chuyun_navigation2/config/nav2_rk3566_diff.yaml",
+        "omni": "/root/chuyun_ws/install/chuyun_navigation2/share/chuyun_navigation2/config/nav2_rk3566_omni.yaml"
+      }
+    },
+    "lite": {
+      "id": "navigation_lite",
+      "description": "Lite 轻量导航",
+      "command": "ros2",
+      "args": [
+        "launch",
+        "chuyun_navigation2",
+        "lite_navigation.launch.py"
+      ],
+      "params_files": {
+        "diff": "/root/chuyun_ws/install/chuyun_navigation2/share/chuyun_navigation2/config/lite_navigation_diff.yaml",
+        "omni": "/root/chuyun_ws/install/chuyun_navigation2/share/chuyun_navigation2/config/lite_navigation_omni.yaml"
+      }
+    }
+  }
+}
